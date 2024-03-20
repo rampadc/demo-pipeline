@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: hi-deployer-
+  namespace: default
+spec:
+  pipelineRef:
+    name: hi-deployer
+  serviceAccountName: pipeline
+  timeout: 8h0m0s
